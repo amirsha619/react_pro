@@ -8,4 +8,5 @@ CMD ["npm","run","build"]
 
 #second phase for nginx server : copy build folder from previous phase
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html/
